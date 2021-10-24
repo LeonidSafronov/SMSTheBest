@@ -20,12 +20,14 @@ class InitialView: UIView, InitialRootView {
     
     private lazy var signInButton: SMSButton = {
         let button = SMSButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.set(backgroundColor: .systemPink, title: "Sign in")
         return button
     } ()
     
     private lazy var signUpButton: SMSButton = {
         let button = SMSButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.set(backgroundColor: .systemBlue, title: "Sign up")
         return button
     } ()
@@ -55,8 +57,8 @@ class InitialView: UIView, InitialRootView {
     
     private func configureSignInButton() {
         NSLayoutConstraint.activate([
-            signInButton.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 150),
-            signUpButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            signInButton.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 100),
+            signInButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             signInButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             signInButton.heightAnchor.constraint(equalToConstant: 50)
         ])
