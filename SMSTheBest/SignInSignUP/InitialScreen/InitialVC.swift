@@ -18,7 +18,6 @@ class InitialVC: UIViewController, InitialViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }
 
