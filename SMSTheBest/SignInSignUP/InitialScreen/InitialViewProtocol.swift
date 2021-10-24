@@ -12,5 +12,7 @@ protocol InitialRootView: UIView {
 }
 
 protocol InitialViewDelegate: AnyObject {
-    
+    func goToSignInView()
+    func goToSignUpView()
+    func showError()
 }

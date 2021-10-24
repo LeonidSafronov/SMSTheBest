@@ -20,17 +20,28 @@ class InitialView: UIView, InitialRootView {
     
     private lazy var signInButton: SMSButton = {
         let button = SMSButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.set(backgroundColor: .systemPink, title: "Sign in")
+        button.addTarget(self, action: #selector(pushSignInVC), for: .touchUpInside)
         return button
     } ()
     
     private lazy var signUpButton: SMSButton = {
         let button = SMSButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.set(backgroundColor: .systemBlue, title: "Sign up")
+        button.addTarget(self, action: #selector(pushSignUpVC), for: .touchUpInside)
         return button
     } ()
+    
+    
+    @objc func pushSignInVC() {
+        delegate?.goToSignInView()
+        print(#function)
+    }
+        
+    @objc func pushSignUpVC() {
+        delegate?.goToSignUpView()
+        print(#function)
+    }
     
     override init(frame: CGRect) {
         super .init(frame: frame)

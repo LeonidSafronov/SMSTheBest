@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitialVC: UIViewController, InitialViewDelegate {
+class InitialVC: UIViewController {
     
     private lazy var rootView: InitialRootView = InitialView()
     
@@ -21,3 +21,19 @@ class InitialVC: UIViewController, InitialViewDelegate {
     }
 }
 
+extension InitialVC: InitialViewDelegate {
+
+    func goToSignInView() {
+        let signInVC = SignInVC()
+        navigationController?.pushViewController(signInVC, animated: true)
+    }
+    
+    func goToSignUpView() {
+        let signUpVC = SignUpVC()
+        navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    func showError() {
+        
+    }
+}
