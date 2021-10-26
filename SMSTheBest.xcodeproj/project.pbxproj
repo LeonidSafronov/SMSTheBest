@@ -13,10 +13,10 @@
 		B3C4C5C32725B8450035D48E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5C22725B8450035D48E /* SignUpVC.swift */; };
 		B3C4C5C52725B85C0035D48E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5C42725B85B0035D48E /* SignUpView.swift */; };
 		B3C4C5C72725B8720035D48E /* SignUpViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5C62725B8720035D48E /* SignUpViewProtocol.swift */; };
+		B3EEC3952728909E0061A052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EEC3942728909E0061A052 /* Assets.xcassets */; };
 		B3FF1BDF2721358B003319CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF1BDE2721358B003319CB /* AppDelegate.swift */; };
 		B3FF1BE12721358B003319CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF1BE02721358B003319CB /* SceneDelegate.swift */; };
 		B3FF1BE32721358B003319CB /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF1BE22721358B003319CB /* InitialVC.swift */; };
-		B3FF1BE827213592003319CB /* sms-logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B3FF1BE727213592003319CB /* sms-logo.pdf */; };
 		B3FF1BEB27213592003319CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FF1BE927213592003319CB /* LaunchScreen.storyboard */; };
 		B3FF1BF627213592003319CB /* SMSTheBestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF1BF527213592003319CB /* SMSTheBestTests.swift */; };
 		B3FF1C0127213592003319CB /* SMSTheBestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF1C0027213592003319CB /* SMSTheBestUITests.swift */; };
@@ -52,13 +52,13 @@
 		B3C4C5C22725B8450035D48E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		B3C4C5C42725B85B0035D48E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B3C4C5C62725B8720035D48E /* SignUpViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewProtocol.swift; sourceTree = "<group>"; };
+		B3EEC3942728909E0061A052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3FF1BDB2721358B003319CB /* SMSTheBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSTheBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FF1BDE2721358B003319CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3FF1BE02721358B003319CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B3FF1BE22721358B003319CB /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
-		B3FF1BE727213592003319CB /* sms-logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "sms-logo.pdf"; path = "Assets.xcassets/sms-Logo.imageset/sms-logo.pdf"; sourceTree = "<group>"; };
 		B3FF1BEA27213592003319CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B3FF1BEC27213592003319CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FF1BEC27213592003319CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		B3FF1BF127213592003319CB /* SMSTheBestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMSTheBestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FF1BF527213592003319CB /* SMSTheBestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSTheBestTests.swift; sourceTree = "<group>"; };
 		B3FF1BF727213592003319CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,9 +118,21 @@
 			path = SignUpScreen;
 			sourceTree = "<group>";
 		};
+		B3EEC396272891DB0061A052 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B3EEC3942728909E0061A052 /* Assets.xcassets */,
+				B3FF1BDE2721358B003319CB /* AppDelegate.swift */,
+				B3FF1BE02721358B003319CB /* SceneDelegate.swift */,
+				B3FF1BE927213592003319CB /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		B3FF1BD22721358B003319CB = {
 			isa = PBXGroup;
 			children = (
+				B3EEC396272891DB0061A052 /* Support */,
 				B3FF1C20272590C5003319CB /* Utilities */,
 				B3FF1BDD2721358B003319CB /* SMSTheBest */,
 				B3FF1BF427213592003319CB /* SMSTheBestTests */,
@@ -142,14 +154,10 @@
 		B3FF1BDD2721358B003319CB /* SMSTheBest */ = {
 			isa = PBXGroup;
 			children = (
+				B3FF1BEC27213592003319CB /* Info.plist */,
 				B3FF1C1D27258D60003319CB /* Extensions */,
 				B3FF1C1427257504003319CB /* Buttons */,
 				B3FF1C0E27256DE1003319CB /* SignInSignUP */,
-				B3FF1BDE2721358B003319CB /* AppDelegate.swift */,
-				B3FF1BE02721358B003319CB /* SceneDelegate.swift */,
-				B3FF1BE727213592003319CB /* sms-logo.pdf */,
-				B3FF1BE927213592003319CB /* LaunchScreen.storyboard */,
-				B3FF1BEC27213592003319CB /* Info.plist */,
 			);
 			path = SMSTheBest;
 			sourceTree = "<group>";
@@ -321,7 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FF1BEB27213592003319CB /* LaunchScreen.storyboard in Resources */,
-				B3FF1BE827213592003319CB /* sms-logo.pdf in Resources */,
+				B3EEC3952728909E0061A052 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +534,6 @@
 		B3FF1C0627213592003319CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NP986THG;
@@ -545,7 +552,6 @@
 		B3FF1C0727213592003319CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NP986THG;
