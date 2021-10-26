@@ -35,12 +35,10 @@ class InitialView: UIView, InitialRootView {
     
     @objc func pushSignInVC() {
         delegate?.goToSignInView()
-        print(#function)
     }
         
     @objc func pushSignUpVC() {
         delegate?.goToSignUpView()
-        print(#function)
     }
     
     override init(frame: CGRect) {
