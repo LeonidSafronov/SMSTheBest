@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>770932771417-mq085cs7lid8pau70v5fccjsv4c4q1au.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.770932771417-mq085cs7lid8pau70v5fccjsv4c4q1au</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAI4oDF0iv59LKTN5aqff4Nw8KP5GMygtw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>770932771417</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Leonid.SMSTheBest</string>
+	<key>PROJECT_ID</key>
+	<string>smsloginproject</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smsloginproject.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:770932771417:ios:75ed243fbc0f149f91ff48</string>
+</dict>
+</plist>
