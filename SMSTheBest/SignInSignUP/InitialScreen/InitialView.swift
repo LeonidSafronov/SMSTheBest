@@ -46,35 +46,25 @@ class InitialView: UIView, InitialRootView {
         backgroundColor = .systemBackground
         addSubviews(logoImageView, signInButton, signUpButton)
         
-        configureLogoImageView()
-        configureSignInButton()
-        configureSignUpButton()
+        configureView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func configureLogoImageView() {
+    private func configureView() {
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
             logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 100),
-            logoImageView.widthAnchor.constraint(equalToConstant: 100)
-        ])
-    }
+            logoImageView.widthAnchor.constraint(equalToConstant: 100),
     
-    private func configureSignInButton() {
-        NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 100),
             signInButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             signInButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-            signInButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
-    }
-    
-    private func configureSignUpButton() {
-        NSLayoutConstraint.activate([
+            signInButton.heightAnchor.constraint(equalToConstant: 50),
+            
             signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 50),
             signUpButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             signUpButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),

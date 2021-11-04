@@ -10,6 +10,7 @@ import UIKit
 class SMSTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -21,5 +22,17 @@ class SMSTextField: UITextField {
         self.placeholder = placeholder
         self.layer.cornerRadius = cornerRadius
         self.layer.backgroundColor = backgroundColor.cgColor
+    }
+    
+    private func configure() {
+        layer.cornerRadius = 10
+        layer.backgroundColor = UIColor.systemBackground.cgColor
+        translatesAutoresizingMaskIntoConstraints = false
+        textAlignment = .center
+    }
+    
+    func set(backgroundColor: CGColor, placeholder: String) {
+        self.layer.backgroundColor = backgroundColor
+        self.placeholder = placeholder
     }
 }
