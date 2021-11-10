@@ -29,10 +29,16 @@ class SignUpView: UIView, SignUpRootView {
         return button
     } ()
     
+    private lazy var sendCodeButton: SMSButton = {
+        let button = SMSButton()
+        button.set(backgroundColor: .systemBlue, title: "Send code")
+        return button
+    } ()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
-        addSubviews(phoneTextField, codeTextField, confirmButton)
+        addSubviews(phoneTextField, sendCodeButton, codeTextField, confirmButton)
         
         configureView()
     }
@@ -48,7 +54,12 @@ class SignUpView: UIView, SignUpRootView {
             phoneTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             phoneTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            codeTextField.topAnchor.constraint(equalTo: phoneTextField.bottomAnchor, constant: 50),
+            sendCodeButton.topAnchor.constraint(equalTo: phoneTextField.bottomAnchor, constant: 50),
+            sendCodeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            sendCodeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            sendCodeButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            codeTextField.topAnchor.constraint(equalTo: sendCodeButton.bottomAnchor, constant: 50),
             codeTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             codeTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             codeTextField.heightAnchor.constraint(equalToConstant: 50),

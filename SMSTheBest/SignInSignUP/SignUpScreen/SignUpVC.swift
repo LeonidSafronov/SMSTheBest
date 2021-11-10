@@ -20,5 +20,4 @@ class SignUpVC: UIViewController, SignUpViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
