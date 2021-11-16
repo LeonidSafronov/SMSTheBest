@@ -36,6 +36,7 @@
 		9C5A9C99272C23C300C34986 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9C5A9C98272C23C300C34986 /* FirebaseFirestoreCombine-Community */; };
 		9C5A9C9B272C2AFF00C34986 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5A9C9A272C2AFF00C34986 /* GoogleService-Info.plist */; };
 		9C5A9C9E272C3D6B00C34986 /* SMSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A9C9D272C3D6B00C34986 /* SMSTextField.swift */; };
+		9C77DB1C2743E4CC00A91B68 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77DB1B2743E4CC00A91B68 /* AuthManager.swift */; };
 		B3C4C5BD2725B7EF0035D48E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5BC2725B7EF0035D48E /* SignInView.swift */; };
 		B3C4C5BF2725B8080035D48E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5BE2725B8080035D48E /* SignInVC.swift */; };
 		B3C4C5C12725B8220035D48E /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5C02725B8220035D48E /* SignInViewProtocol.swift */; };
@@ -78,6 +79,7 @@
 		9C5A9C63272AE1C800C34986 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		9C5A9C9A272C2AFF00C34986 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C5A9C9D272C3D6B00C34986 /* SMSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSTextField.swift; sourceTree = "<group>"; };
+		9C77DB1B2743E4CC00A91B68 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B31D49C32728952C00CF310A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C4C5BC2725B7EF0035D48E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B3C4C5BE2725B8080035D48E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		9C77DB1A2743E4B500A91B68 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9C77DB1B2743E4CC00A91B68 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		B3C4C5BA2725B7A20035D48E /* SIgnInScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		B3FF1BDD2721358B003319CB /* SMSTheBest */ = {
 			isa = PBXGroup;
 			children = (
+				9C77DB1A2743E4B500A91B68 /* Managers */,
 				B31D49C32728952C00CF310A /* Info.plist */,
 				B3FF1C1D27258D60003319CB /* Extensions */,
 				B3FF1C1427257504003319CB /* Buttons */,
@@ -456,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FF1C1F27258D95003319CB /* UIView+Ext.swift in Sources */,
+				9C77DB1C2743E4CC00A91B68 /* AuthManager.swift in Sources */,
 				B3FF1BE32721358B003319CB /* InitialVC.swift in Sources */,
 				B3FF1C1127257043003319CB /* InitialView.swift in Sources */,
 				B3FF1BDF2721358B003319CB /* AppDelegate.swift in Sources */,
