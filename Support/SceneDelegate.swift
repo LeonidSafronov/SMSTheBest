@@ -5,16 +5,23 @@
 //  Created by Леонид on 21.10.2021.
 //
 
+import FirebaseAuth
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let navigationController = UINavigationController(rootViewController: InitialVC())
+        if Auth.auth().currentUser == nil {
+            navigationController = UINavigationController(rootViewController: InitialVC())
+        } else {
+            navigationController = UINavigationController(rootViewController: InitialVC())
+        }
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)

@@ -8,7 +8,7 @@
 import UIKit
 
 class SignUpView: UIView, SignUpRootView {
-
+    
     weak var delegate: SignUpViewDelegate?
     
     private lazy var phoneTextField: SMSTextField = {
@@ -20,20 +20,46 @@ class SignUpView: UIView, SignUpRootView {
     private lazy var codeTextField: SMSTextField = {
         let field = SMSTextField()
         field.set(backgroundColor: UIColor.systemGray6.cgColor, placeholder: "Enter the code")
+        
         return field
     } ()
     
     private lazy var confirmButton: SMSButton = {
         let button = SMSButton()
         button.set(backgroundColor: .systemBlue, title: "Confirm")
+        button.addTarget(self, action: #selector(sendPhoneNumber), for: .touchUpInside)
         return button
     } ()
     
     private lazy var sendCodeButton: SMSButton = {
         let button = SMSButton()
         button.set(backgroundColor: .systemBlue, title: "Send code")
+        button.addTarget(self, action: #selector(sendSmsCode), for: .touchUpInside)
         return button
     } ()
+    
+    @objc func sendPhoneNumber() {
+        delegate?.takePhoneNumber()
+        if let text = phoneTextField.text, !text.isEmpty {
+            let number = text
+            AuthManager.shared.startAuth(phoneNumber: number) { [weak self] success in
+                guard success else { return }
+//                TODO: for futher actions
+            }
+        }
+    }
+    
+    @objc func sendSmsCode() {
+        delegate?.takeSmsCode()
+        if let text = codeTextField.text, !text.isEmpty {
+            let code = text
+            AuthManager.shared.verifyCode(smsCode: code) { [weak self] success in
+                guard success else { return }
+                print("Verification success")
+//                TODO: self?.navigationController?.pushViewController...
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

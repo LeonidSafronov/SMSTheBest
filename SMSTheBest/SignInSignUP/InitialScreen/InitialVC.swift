@@ -34,6 +34,6 @@ extension InitialVC: InitialViewDelegate {
     }
     
     func showError() {
-        
+//       TODO: show error notification screen
     }
 }

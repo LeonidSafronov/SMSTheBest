@@ -7,10 +7,11 @@
 
 import UIKit
 
-protocol SignUpViewDelegate: AnyObject {
-    
-}
-
 protocol SignUpRootView: UIView {
     var delegate: SignUpViewDelegate? { get set }
+}
+
+protocol SignUpViewDelegate: AnyObject {
+    func takePhoneNumber()
+    func takeSmsCode()
 }

@@ -7,6 +7,7 @@
 
 import FirebaseAuth
 import Foundation
+import AVFoundation
 
 class AuthManager {
     
@@ -25,7 +26,23 @@ class AuthManager {
         }
     }
     
-    public func verifyCode(smsCode: String?, completion: @escaping (Bool) -> Void) {
+    public func verifyCode(smsCode: String, completion: @escaping (Bool) -> Void) {
+        guard let verificationId = verificationId else {
+            completion(false)
+            return
+        }
         
+        let credential = PhoneAuthProvider.provider().credential(
+            withVerificationID: verificationId,
+            verificationCode: smsCode
+        )
+        
+        auth.signIn(with: credential) { result, error in
+            guard result != nil, error == nil else {
+                completion(false)
+                return
+            }
+            completion(true)
+        }
     }
 }

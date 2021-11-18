@@ -8,7 +8,9 @@
 import UIKit
 import FirebaseAuth
 
-class SignUpVC: UIViewController, SignUpViewDelegate {
+class SignUpVC: UIViewController {
+    
+    var delegate: SignUpViewDelegate?
     
     private lazy var rootView: SignUpRootView = SignUpView()
     
@@ -19,5 +21,20 @@ class SignUpVC: UIViewController, SignUpViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func signUpAuth() {
+
+    }
+}
+
+extension SignUpVC: SignUpViewDelegate {
+    
+    func takePhoneNumber() {
+        print("phone recieved")
+    }
+    
+    func takeSmsCode() {
+        print("code recieved")
     }
 }
