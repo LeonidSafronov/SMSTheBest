@@ -14,4 +14,5 @@ protocol SignUpRootView: UIView {
 protocol SignUpViewDelegate: AnyObject {
     func takePhoneNumber()
     func takeSmsCode()
+    func goToStartUserView()
 }

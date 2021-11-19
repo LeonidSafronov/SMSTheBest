@@ -27,14 +27,14 @@ class SignUpView: UIView, SignUpRootView {
     private lazy var confirmButton: SMSButton = {
         let button = SMSButton()
         button.set(backgroundColor: .systemBlue, title: "Confirm")
-        button.addTarget(self, action: #selector(sendPhoneNumber), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sendSmsCode), for: .touchUpInside)
         return button
     } ()
     
     private lazy var sendCodeButton: SMSButton = {
         let button = SMSButton()
         button.set(backgroundColor: .systemBlue, title: "Send code")
-        button.addTarget(self, action: #selector(sendSmsCode), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sendPhoneNumber), for: .touchUpInside)
         return button
     } ()
     
@@ -44,7 +44,7 @@ class SignUpView: UIView, SignUpRootView {
             let number = text
             AuthManager.shared.startAuth(phoneNumber: number) { [weak self] success in
                 guard success else { return }
-//                TODO: for futher actions
+//                TODO: for alerts
             }
         }
     }
@@ -56,7 +56,7 @@ class SignUpView: UIView, SignUpRootView {
             AuthManager.shared.verifyCode(smsCode: code) { [weak self] success in
                 guard success else { return }
                 print("Verification success")
-//                TODO: self?.navigationController?.pushViewController...
+                self?.delegate?.goToStartUserView()
             }
         }
     }
@@ -75,7 +75,7 @@ class SignUpView: UIView, SignUpRootView {
     
     private func configureView() {
         NSLayoutConstraint.activate([
-            phoneTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 200),
+            phoneTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
             phoneTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             phoneTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             phoneTextField.heightAnchor.constraint(equalToConstant: 50),

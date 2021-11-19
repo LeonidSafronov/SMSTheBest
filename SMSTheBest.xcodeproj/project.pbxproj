@@ -37,6 +37,9 @@
 		9C5A9C9B272C2AFF00C34986 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5A9C9A272C2AFF00C34986 /* GoogleService-Info.plist */; };
 		9C5A9C9E272C3D6B00C34986 /* SMSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A9C9D272C3D6B00C34986 /* SMSTextField.swift */; };
 		9C77DB1C2743E4CC00A91B68 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C77DB1B2743E4CC00A91B68 /* AuthManager.swift */; };
+		9CB61F682747C462003097F2 /* StartUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB61F672747C462003097F2 /* StartUserVC.swift */; };
+		9CB61F6A2747C475003097F2 /* StartUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB61F692747C475003097F2 /* StartUserView.swift */; };
+		9CB61F6C2747C48F003097F2 /* StartUserViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB61F6B2747C48F003097F2 /* StartUserViewProtocol.swift */; };
 		B3C4C5BD2725B7EF0035D48E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5BC2725B7EF0035D48E /* SignInView.swift */; };
 		B3C4C5BF2725B8080035D48E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5BE2725B8080035D48E /* SignInVC.swift */; };
 		B3C4C5C12725B8220035D48E /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4C5C02725B8220035D48E /* SignInViewProtocol.swift */; };
@@ -80,6 +83,9 @@
 		9C5A9C9A272C2AFF00C34986 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C5A9C9D272C3D6B00C34986 /* SMSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSTextField.swift; sourceTree = "<group>"; };
 		9C77DB1B2743E4CC00A91B68 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		9CB61F672747C462003097F2 /* StartUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUserVC.swift; sourceTree = "<group>"; };
+		9CB61F692747C475003097F2 /* StartUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUserView.swift; sourceTree = "<group>"; };
+		9CB61F6B2747C48F003097F2 /* StartUserViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUserViewProtocol.swift; sourceTree = "<group>"; };
 		B31D49C32728952C00CF310A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C4C5BC2725B7EF0035D48E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B3C4C5BE2725B8080035D48E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -174,6 +180,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		9CB61F662747C3F1003097F2 /* UserScreens */ = {
+			isa = PBXGroup;
+			children = (
+				9CB61F672747C462003097F2 /* StartUserVC.swift */,
+				9CB61F692747C475003097F2 /* StartUserView.swift */,
+				9CB61F6B2747C48F003097F2 /* StartUserViewProtocol.swift */,
+			);
+			path = UserScreens;
+			sourceTree = "<group>";
+		};
 		B3C4C5BA2725B7A20035D48E /* SIgnInScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +280,7 @@
 			children = (
 				B3FF1C0F27257003003319CB /* InitialScreen */,
 				B3C4C5BA2725B7A20035D48E /* SIgnInScreen */,
+				9CB61F662747C3F1003097F2 /* UserScreens */,
 				B3C4C5BB2725B7B40035D48E /* SignUpScreen */,
 			);
 			path = SignInSignUP;
@@ -467,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FF1C1F27258D95003319CB /* UIView+Ext.swift in Sources */,
+				9CB61F682747C462003097F2 /* StartUserVC.swift in Sources */,
 				9C77DB1C2743E4CC00A91B68 /* AuthManager.swift in Sources */,
 				B3FF1BE32721358B003319CB /* InitialVC.swift in Sources */,
 				B3FF1C1127257043003319CB /* InitialView.swift in Sources */,
@@ -475,11 +493,13 @@
 				B3C4C5BF2725B8080035D48E /* SignInVC.swift in Sources */,
 				B3C4C5BD2725B7EF0035D48E /* SignInView.swift in Sources */,
 				B3C4C5C72725B8720035D48E /* SignUpViewProtocol.swift in Sources */,
+				9CB61F6A2747C475003097F2 /* StartUserView.swift in Sources */,
 				9C5A9C9E272C3D6B00C34986 /* SMSTextField.swift in Sources */,
 				B3FF1C1A27258527003319CB /* SMSButtonProtocol.swift in Sources */,
 				B3FF1C1C272585BE003319CB /* SMSButton.swift in Sources */,
 				B3FF1C1327257191003319CB /* InitialViewProtocol.swift in Sources */,
 				B3C4C5C52725B85C0035D48E /* SignUpView.swift in Sources */,
+				9CB61F6C2747C48F003097F2 /* StartUserViewProtocol.swift in Sources */,
 				B3C4C5C32725B8450035D48E /* SignUpVC.swift in Sources */,
 				B3FF1BE12721358B003319CB /* SceneDelegate.swift in Sources */,
 				9C5A9C64272AE1C800C34986 /* String+Ext.swift in Sources */,

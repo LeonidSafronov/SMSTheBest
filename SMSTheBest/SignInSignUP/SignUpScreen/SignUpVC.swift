@@ -30,6 +30,11 @@ class SignUpVC: UIViewController {
 
 extension SignUpVC: SignUpViewDelegate {
     
+    func goToStartUserView() {
+        let startUserVC = StartUserVC()
+        navigationController?.pushViewController(startUserVC, animated: true)
+    }
+    
     func takePhoneNumber() {
         print("phone recieved")
     }
