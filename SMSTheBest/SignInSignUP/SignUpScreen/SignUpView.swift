@@ -7,6 +7,8 @@
 
 import UIKit
 
+// TODO: configure keyboard (add keyboard manager)
+
 class SignUpView: UIView, SignUpRootView {
     
     weak var delegate: SignUpViewDelegate?

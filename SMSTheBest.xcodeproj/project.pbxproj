@@ -439,6 +439,7 @@
 			mainGroup = B3FF1BD22721358B003319CB;
 			packageReferences = (
 				9C5A9C65272C23C300C34986 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9CB06550274D309A00BD61C4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = B3FF1BDC2721358B003319CB /* Products */;
 			projectDirPath = "";
@@ -669,6 +670,7 @@
 		B3FF1C0627213592003319CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NP986THG;
@@ -680,13 +682,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Leonid.SMSTheBest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B3FF1C0727213592003319CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NP986THG;
@@ -698,7 +701,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Leonid.SMSTheBest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -834,6 +837,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.9.0;
+			};
+		};
+		9CB06550274D309A00BD61C4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
